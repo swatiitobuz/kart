@@ -1,0 +1,19 @@
+// INIT RAZORPAY PAYMENT
+POST http://localhost:5000/private/payment/razorpay/init
+Content-Type: application/json
+
+{
+    "userId": "64317a14f2a5ba39fe3682cf",
+    "amount": 100
+}
+
+###
+
+// FINALIZE RAZORPAY PAYMENT
+POST http://localhost:5000/private/payment/razorpay/success
+Content-Type: application/json
+
+{
+    "orderId":"order_LgrzXi0kMb3ufm",
+    "userId": "64317a14f2a5ba39fe3682cf"
+}

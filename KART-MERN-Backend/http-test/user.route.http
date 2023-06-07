@@ -1,0 +1,46 @@
+// REGISTER USER
+POST http://localhost:5000/public/auth/register
+Content-Type: application/json
+
+{
+    "email":"sneha@gmail.com",
+    "password": "12345",
+    "mobile": 8777829385
+}
+
+###
+
+# LOGIN USER
+POST http://localhost:5000/public/auth/login
+Content-Type: application/json
+
+{
+    "email":"sneha122@gmail.com",
+    "password": "1234"
+}
+
+###
+
+# GET USER
+GET http://localhost:5000/public/auth/profile/6427e646c260690bd24a27ff
+Content-Type: application/json
+
+###
+
+# UPDATE USER
+PUT http://localhost:5000/public/auth/update/6427e646c260690bd24a27ff
+Content-Type: application/json
+
+{
+   "AddressType":"home"
+}
+
+###
+
+# RESET PASSWORD
+PUT http://localhost:5000/public/auth/reset-password/6427e646c260690bd24a27ff
+Content-Type: application/json
+
+{
+    "password": "123"
+}

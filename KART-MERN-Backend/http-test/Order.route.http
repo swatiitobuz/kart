@@ -1,0 +1,26 @@
+# create order
+POST http://localhost:5000/private/orders/new
+Content-Type: application/json
+
+{
+    "userId": "64317a14f2a5ba39fe3682cf",
+    "productId":"63666dcea9cd7e8bb75538fd",
+    "amount": 100,
+    "quantity":1,
+    "address":"Sneha Shaw, LALABAGAN, SARADA PALLY, Kolkata - 700066, West Bengal, Mobile: 8777829385, Alt. Mobile - 08777829385, Landmark: fs, AddressType: Home"
+
+}
+
+###
+# get all orders
+GET http://localhost:5000/private/orders/all/64317a14f2a5ba39fe3682cf
+Content-Type: application/json
+
+###
+# Search
+GET http://localhost:5000/private/orders/64317a14f2a5ba39fe3682cf/search?keyword=d
+Content-Type: application/json
+
+###
+# Filter
+GET http://localhost:5000/private/orders/64317a14f2a5ba39fe3682cf/filter?status=cancelled
